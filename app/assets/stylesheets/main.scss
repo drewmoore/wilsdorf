@@ -29,7 +29,7 @@ body, html {
 
 [class^="sub-container"] {
   display: inline-block;
-  position: relative;
+  position: absolute;
   min-height: 100%;
   height: 100%;
   background-color: white;
@@ -45,8 +45,10 @@ body, html {
 .sub-container-links {
   min-width: 25%;
   width: 25%;
+  left: 0;
+  top: 0;
   .chemin {
-    background: url(exports.png) -799px -142px no-repeat;
+    background: asset-data-url("exports.png") -799px -142px no-repeat;
   }
   @media (max-width: $portrait) {
     min-width: 100%;
@@ -56,10 +58,12 @@ body, html {
   }
 }
 .sub-container-lp {
-  min-width: 74.6%;
-  width: 74.6%;
+  min-width: 75%;
+  width: 75%;
+  right: 0;
+  bottom: 0;
   .chemin {
-    background: url(exports.png) -1154px -142px no-repeat;
+    background: asset-data-url("exports.png") -1154px -142px no-repeat;
   }
   @media (max-width: $portrait) {
     min-width: 100%;
