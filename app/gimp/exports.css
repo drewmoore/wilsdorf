@@ -1,0 +1,22 @@
+/*
+
+        Creating a sprite from following images:
+        
+        app/gimp/exports/chemin-bottom.png (799x1083)
+        app/gimp/exports/chemin-left.png (355x799)
+        app/gimp/exports/chemin-right.png (1083x799)
+        app/gimp/exports/chemin-top.png (799x355)
+
+        Output files:
+          app/gimp/exports.png
+          app/gimp/exports.css
+
+        Output size:
+          3036x1083
+
+
+*/
+img.chemin-bottom { width: 799px; height: 1083px; background: url(exports.png) 0px 0px no-repeat; }
+img.chemin-left { width: 355px; height: 799px; background: url(exports.png) -799px -142px no-repeat; }
+img.chemin-right { width: 1083px; height: 799px; background: url(exports.png) -1154px -142px no-repeat; }
+img.chemin-top { width: 799px; height: 355px; background: url(exports.png) -2237px -364px no-repeat; }

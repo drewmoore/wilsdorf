@@ -34,7 +34,6 @@ body, html {
   height: 100%;
   background-color: white;
   .chemin {
-    background-image: asset-data-url("chemin.png");
     background-size: 100% 100%;
     background-repeat: no-repeat;
     background-position: center;
@@ -47,6 +46,7 @@ body, html {
   min-width: 25%;
   width: 25%;
   .chemin {
+    background: url(exports.png) -799px -142px no-repeat;
   }
   @media (max-width: $portrait) {
     min-width: 100%;
@@ -59,6 +59,7 @@ body, html {
   min-width: 74.6%;
   width: 74.6%;
   .chemin {
+    background: url(exports.png) -1154px -142px no-repeat;
   }
   @media (max-width: $portrait) {
     min-width: 100%;
