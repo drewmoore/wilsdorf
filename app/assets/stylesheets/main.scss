@@ -1,6 +1,12 @@
 $portrait: 350px;
 $landscape: 800px;
 $desktop: 801px;
+$turquoise: #22c7c8;
+
+@font-face {
+  font-family: "Digital";
+  src: font-url("fonts/VT323-Regular.ttf");
+}
 
 body, html {
   background-color: black;
@@ -32,11 +38,27 @@ body, html {
   position: absolute;
   min-height: 100%;
   height: 100%;
-  background-color: white;
+  background-color: rgba(0, 0, 0, 0.0);
+  .my-panel {
+    position: absolute;
+    top: 0;
+  }
+  .light-panel {
+    z-index: +1;
+    background-color: white;
+    opacity: 1.0;
+  }
+  .black-panel {
+    z-index: +3;
+    background-color: black;
+    opacity: 0.471;
+  }
+  .content-panel {
+    z-index: +4;
+    background-color: rgba(0, 0, 0, 0.0);
+  }
   .chemin {
-    background-size: 100% 100%;
-    background-repeat: no-repeat;
-    background-position: center;
+    z-index: +2;
   }
   @media (max-width: $portrait) {
     display: block;
@@ -48,13 +70,34 @@ body, html {
   left: 0;
   top: 0;
   .chemin {
-    background: asset-data-url("exports.png") -799px -142px no-repeat;
+    background: asset-data-url("chemin-left.png") 0px 0px no-repeat;
   }
   @media (max-width: $portrait) {
     min-width: 100%;
     width: 100%;
     min-height: 25%;
     height: 25%;
+  }
+  #links-list {
+    height: 68%;
+    min-height: 68%;
+    margin-top: 10%;
+    li {
+      min-width: 100%;
+      width: 100%;
+      height: 14%;
+      min-height: 14%;
+      position: relative;
+      a {
+        font-family: "Digital";
+        font-size: 2.3em;
+        color: $turquoise;
+        text-decoration: none;
+      }
+    }
+    li:nth-child(even) {
+      text-align: right;
+    }
   }
 }
 .sub-container-lp {
@@ -63,7 +106,7 @@ body, html {
   right: 0;
   bottom: 0;
   .chemin {
-    background: asset-data-url("exports.png") -1154px -142px no-repeat;
+    background: asset-data-url("chemin-right.png") 0px 0px no-repeat;
   }
   @media (max-width: $portrait) {
     min-width: 100%;
@@ -73,5 +116,71 @@ body, html {
   }
 }
 
+.full-image-back {
+  background-size: 100% 100%;
+  background-repeat: no-repeat;
+  background-position: center;
+}
+.wilsdorf-logo {
+  background: image-url("wilsdorf-logo.png") 0px 0px no-repeat;
+  background-size: 100% 100%;
+  min-width: 100%;
+  width: 100%;
+  min-height: 20%;
+  height: 20%;
+}
 
 
+
+
+
+
+.link-underline {
+  width: 0%;
+  min-width: 0%;
+  height: 50%;
+  min-height: 50%;
+  position: absolute;
+  bottom: 0;
+
+  border: 1px dotted black;
+}
+
+.link-underline > div {
+  height: 100%;
+  min-height: 100%;
+  display: inline-block;
+  position: absolute;
+  .tha-blue {
+    background-color: $turquoise;
+    width: 0%;
+    min-width: 0%;
+    position: absolute;
+    height: 20%;
+    min-height: 20%;
+    top: 30%;
+  }
+}
+
+
+.tha-line {
+  width: 80%;
+  min-width: 80%;
+  left: 0;
+  .tha-blue {
+    border-top-left-radius: 2em;
+    border-bottom-left-radius: 2em;
+  }
+}
+
+.tha-curve {
+  width: 20%;
+  min-width: 20%;
+  right: 0;
+  top: 0;
+  transform: rotate(45deg);
+  .tha-blue {
+    border-top-right-radius: 2em;
+    border-bottom-right-radius: 2em;
+  }
+}

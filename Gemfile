@@ -52,3 +52,4 @@ end
 
 gem 'sprite-factory'
 gem 'rmagick'
+gem 'lodash-rails'
